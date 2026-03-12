@@ -51,9 +51,11 @@ TIP: [Rappel Git] Trois dépôts sont ici utilisés : le dépot Github de l'ense
 * Observer le code du projet `todolist-debut-ex1`
 
 *Le code est-il structuré en couches ? Quel problèmes ce code peut-il poser ?*
+Le code n'est pas structuré, l'architecture en couche demande qu'il soit divisé en trois couches: présentation, logique, et accès aux données. Le code actuelle ne l'est pas. Par example la classe "TodoItem" "Sert à la fois d'entité JPA et de DTO", dont données et transfer objet.
 
+L'abscence de structure implique de la difficulté de maintenance, faible évolutivité et réutilisabilité. 
 *Où se trouve le code métier (voir la règle de gestion RG 1) ?*
-
+Le code métier se situe dans le TodoListController, avec la méthode finalContent() 
 *Cette règle est-elle facilement testable par un test unitaire ?*
 
 * Lancer une base PostgreSQL en Docker dans un terminal (on lance ici la base en mode interactif pour visualiser son activité. Pour la lancer en tâche de fond, remplacer les options `it` par `d` comme 'daemon'):

@@ -12,7 +12,7 @@ Commentaires éventuels des étudiants : #XXXXXX#
 
 * Disposer d'un PC d'au moins 8 Gio de RAM avec 20 Gio de disque disponible ; Un PC par binôme suffit, choisir le plus puissant (avec le plus de RAM).
 * Disposer d'une connexion internet hors université pendant le TP (le réseau de l'université semble bloquer un certain nombre de choses). En cas d'urgence, je peux fournir de la data.
-* Disposer d'un compte Github par personne (ou un pour deux personnes si vous êtes en binôme) et avoir https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token[créé un access token] avec le groupe de droits `repo`, le faire depuis https://github.com/settings/tokens[ici];
+* Disposer d'un compte Github par personne (ou un pour deux personnes si vous êtes en binôme) et avoir https://github.com/settings/personal-access-tokens[créé un access token] de type `Fine-grained personal access tokens` avec le groupe de droits `Repo`.
 
 ## Environnement de développement
 
@@ -20,7 +20,7 @@ Deux options sont possibles :
 
 ### Option 1 [préférée] - Utiliser la VM fournie
 
-Télécharger, décompresser et *tester* cette https://public.florat.net/cours_miage/vm-tp-miage.ova[image VirtualBox] *avant le TP*. Elle contient tous les outils nécessaires (Intellij IDEA, DBeaver, client REST Insomnia, Firefox...).
+Télécharger, décompresser et *tester* cette https://public.florat.net/cours_miage/vm-tp-miage.ova[image VirtualBox] *avant le TP*. Elle contient tous les outils nécessaires (Intellij IDEA, DBeaver, client REST Bruno, Firefox...).
 
 Le login/mot de passe est : `vagrant`/`vagrant`.
 

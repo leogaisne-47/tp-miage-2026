@@ -55,19 +55,26 @@ Le code n'est pas structuré, l'architecture en couche demande qu'il soit divis�
 
 L'abscence de structure implique de la difficulté de maintenance, faible évolutivité et réutilisabilité. 
 *Où se trouve le code métier (voir la règle de gestion RG 1) ?*
-Le code métier se situe dans le TodoListController, avec la méthode finalContent() 
+Le code métier se situe dans le TodoListController, avec la méthode finalContent().
+
 *Cette règle est-elle facilement testable par un test unitaire ?*
+La règle de gestion RG1 est une règle de gestion que l'infrastructure doit obligatoirement respecter. Il est donc très simple de le vérifier via un test unitaire. En revanche, dans ce cas précis, la visibilité de la méthode finalContent étant private, on est obligé de tester tout le contrôleur pour vérifier cette règle.
 
 * Lancer une base PostgreSQL en Docker dans un terminal (on lance ici la base en mode interactif pour visualiser son activité. Pour la lancer en tâche de fond, remplacer les options `it` par `d` comme 'daemon'):
 ```bash
 docker run -it -e POSTGRES_PASSWORD=password -p 5432:5432 postgres
 ```
 *Expliquer cette ligne de commande (y compris les options utilisées)*
+docker run : lance un nouveau conteneur
+-it : Permet de voir les logs s'afficher en direct dans la console
+- e : permet de définir une variable d'environnement (ici le mot de passe)
+-p : Défini le port 5423:5432
+postgres : le nom de l'image à pull
 
 * Compléter le code manquant dans la méthode `TodoListController.createTodoItem()`
 
 *Pourquoi `todoItemRepository` est-il `null` ? Quelle est la meilleure façon de l'injecter ?*
-
+Car todoItemRepository n'est pas encore défini, en effet, il existe 2 constructeurs dans la classe, ce qui renvoi donc un objet vide ou null. La meilleure façon de l'injecter est donc de supprimer le constructeur vide. On doit aussi utiliser final pour s'assurer que la valeur soit affectée
 * Modifier le code en conséquence.
 
 * Tester vos endpoints avec un client REST.

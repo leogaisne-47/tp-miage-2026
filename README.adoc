@@ -131,7 +131,7 @@ _Temps estimé : 20 mins_
 * Implémenter (en junit) des TU portant sur la règle de gestion qui consiste à afficher `[LATE!]` dans la description d'un item en retard de plus de 24h.
 
 *Quels famille de tests devra-t-on écrire pour les adaptateurs ?* 
-
+Des tests de couche Web pour valider le mapping JSON et les codes de réponse HTTP et des tests d'intégration de données pour vérifier la validité des requêtes SQL et la communication avec la base de données.
 *S'il vous reste du temps, écrire quelques-uns de ces tests.*
 
 [TIP]

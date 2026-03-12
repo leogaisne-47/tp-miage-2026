@@ -1,4 +1,4 @@
-package com.acme.todolist.adapters.rest_api;
+package com.acme.todolist;
 
 import java.util.List;
 

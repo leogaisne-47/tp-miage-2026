@@ -10,7 +10,7 @@ import javax.persistence.Id;
  * Sert à la fois d'entité JPA et de DTO (entrée/sortie des services Web)
  * 
  * @author bflorat
- *
+ * test for push
  */
 @Entity
 public class TodoItem {
